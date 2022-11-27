@@ -20,7 +20,7 @@ export default function Weather(props) {
       height={80}
       width={80}
       radius={5}
-      color="#4fa94d"
+      color="#f47e60"
       ariaLabel="ball-triangle-loading"
       wrapperClass={{}}
       wrapperStyle=""
