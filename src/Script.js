@@ -1,8 +1,26 @@
 import React from "react";
-import axios from "axios";
-import { BallTriangle } from "react-loader-spinner";
+/*import axios from "axios";*/
+import "./styles.css";
 
-export default function Weather(props) {
+export default function Script() {
+  return (
+    <div className="Script">
+      <script src="src/index.js"></script>
+      <span className="open-source">
+        <a
+          href="https://github.com/electraan/SheCodes-Weather-app"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Open-source code{" "}
+        </a>
+        by Antonina Ieremenko
+      </span>
+    </div>
+  );
+}
+
+/*export default function Weather(props) {
   function handleResponse(response) {
     alert(
       `The weather in ${response.data.name} is ${Math.round(
@@ -27,4 +45,4 @@ export default function Weather(props) {
       visible={true}
     />
   );
-}
+}*/

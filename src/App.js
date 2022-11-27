@@ -1,17 +1,29 @@
-import "./App.css";
-import Weather from "./weather";
+import "./styles.css";
+import Col5 from "./Col5";
+import Col4 from "./Col4";
+import Col3 from "./Col3";
+import Script from "./Script";
+import background from "./images/mountains_small.jpg";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>It`s owesome app!</p>
-        <h1>Learn React with me</h1>
-
-        <Weather city="California" />
-      </header>
+      <div className="container card">
+        <div
+          style={{
+            backgroundImage: `URL(${background})`,
+          }}
+        >
+          <div className="card-body all">
+            <div className="row">
+              <Col5 />
+              <Col4 />
+              <Col3 />
+            </div>
+          </div>
+        </div>
+      </div>
+      <Script />
     </div>
   );
 }
-
-export default App;
