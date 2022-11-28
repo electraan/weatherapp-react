@@ -16,8 +16,7 @@ h1 {
   display: block;
   text-align: center;
   margin-top: -20px;
-  font-size: 25pt;
-  margin-bottom: 0;
+  font-size: 25pt !important;
 }
 a {
   text-decoration: none !important;

@@ -12,7 +12,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 body {
-  background: #e8e8e8;
+  background: #e8e8e8 !important;
   text-align: center;
 }
 .App .container .card-body.all {
