@@ -16,6 +16,34 @@ export default function Form() {
   let [highTemp, sethighTemp] = useState(null);
   let [lowTemp, setlowTemp] = useState(null);
 
+  let week = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let nowTime = new Date();
+  let day1 = week[nowTime.getDay()];
+
+  let hours = nowTime.getHours();
+  let minut = nowTime.getMinutes();
+
+  /* let fulldate = nowTime.getDate();
+  let month1 = nowTime.getMonth() + 1;
+  let year = nowTime.getFullYear();
+  date = document.querySelector("#date");
+  date.innerHTML = `${fulldate}/${month1}/${year}`;
+
+  function forecastDay(dayNum) {
+    let date = new Date(dayNum * 1000);
+    let day = date.getDay();
+    let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return weekDays[day];
+  } */
+
   function handleResponse(response) {
     setTemp(response.data.main.temp);
     setDescription(response.data.weather[0].description);
@@ -57,6 +85,9 @@ export default function Form() {
             city="Stokenchurch"
             temp={3}
             icon="http://openweathermap.org/img/wn/03d@2x.png"
+            day={day1}
+            time={hours}
+            time2={minut}
           />
           <Col4
             humid={83}
@@ -85,7 +116,14 @@ export default function Form() {
           <button type="submit"></button>
         </form>
         <div className="row">
-          <Col5 city={city} temp={Math.round(temp)} icon={icon} />
+          <Col5
+            city={city}
+            temp={Math.round(temp)}
+            icon={icon}
+            day={day1}
+            time={hours}
+            time2={minut}
+          />
           <Col4
             humid={humid}
             wind={Math.round(wind)}

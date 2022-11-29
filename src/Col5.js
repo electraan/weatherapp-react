@@ -22,11 +22,13 @@ export default function Col5(props) {
         <br />
         <small>
           <em>
-            <span>{mainInfo.day}</span>
+            <span>{props.day}</span>
             <br />
             <span> {mainInfo.date}</span>
             <br />
-            <span>{mainInfo.time}</span>
+            <span>
+              {props.time}:{props.time2}
+            </span>
           </em>
         </small>
       </h1>
