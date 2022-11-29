@@ -8,7 +8,7 @@ export default function Script() {
       <script src="src/index.js"></script>
       <span className="open-source">
         <a
-          href="https://github.com/electraan/SheCodes-Weather-app"
+          href="https://github.com/electraan/weatherapp-react"
           target="_blank"
           rel="noreferrer"
         >
