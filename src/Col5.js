@@ -1,32 +1,24 @@
 import React from "react";
-import Form from "./Form";
 import "./Col5.css";
 
-export default function Col5() {
+export default function Col5(props) {
   let mainInfo = {
-    city: "Kyiv",
     day: "Saturday",
     date: "08/11/2022",
     time: "17:24",
   };
   return (
     <div className="col-5">
-      <Form />
       <span className="icon">
-        <img
-          src="http://openweathermap.org/img/wn/03d@2x.png"
-          alt="weather icon"
-          id="icon"
-          width="160"
-        ></img>
+        <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
       </span>
       <h1>
-        <span className="temperature">19 </span>
+        <span className="temperature">{props.temp} </span>
         <a href="/">°C</a> /<a href="/">°F</a>
       </h1>
 
       <h1>
-        <span className="city-name">{mainInfo.city}</span>
+        <span className="city-name">{props.city}</span>
         <br />
         <small>
           <em>

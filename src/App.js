@@ -1,7 +1,6 @@
 import "./styles.css";
-import Col5 from "./Col5";
-import Col4 from "./Col4";
-import Col3 from "./Col3";
+
+import Form from "./Form";
 import Script from "./Script";
 import "bootstrap/dist/css/bootstrap.css";
 import background from "./images/mountains_small.jpg";
@@ -16,13 +15,7 @@ export default function App() {
           }}
         >
           <div className="card-body all">
-            <div className="row">
-              <Col5 />
-
-              <Col4 />
-
-              <Col3 />
-            </div>
+            <Form />
           </div>
         </div>
       </div>

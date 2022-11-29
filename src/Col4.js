@@ -1,37 +1,24 @@
 import React from "react";
 import "./Col4.css";
 
-export default function Col4() {
-  let nowInfo = {
-    highTemp: "19°",
-    lowTemp: "8°",
-    feelsLike: "8°",
-    humidity: "78",
-    windSpeed: "5 ",
-    description: "Clear sky",
-  };
+export default function Col4(props) {
   return (
     <div className="col-4">
       <h6 className="wind">
         <em>
-          <span id="highTemp">High temp: {nowInfo.highTemp}</span>
+          <div className="highTemp">High temp: {props.highTemp}°C</div>
           <br />
+          <div className="lowTemp">Low temp: {props.lowTemp}°C</div>
           <br />
-          <span id="lowTemp">Low temp: {nowInfo.lowTemp}</span>
+          <div className="feelsLike">Feels like: {props.feels}°C</div>
           <br />
+          <div className="humidity">Humidity: {props.humid} %</div>
           <br />
-          <span id="feelsLike">Feels like: {nowInfo.feelsLike}</span>
+          <div className="windSpeed">Wind speed: {props.wind} km/h</div>
           <br />
-          <br />
-          <span id="humidity">Humidity: {nowInfo.humidity}%</span>
-          <br />
-          <br />
-          <span id="windSpeed">Wind speed: {nowInfo.windSpeed}km/h</span>
-          <br />
-          <br />
-          <span className="description" id="description">
-            Description: It`s {nowInfo.description} now
-          </span>
+          <div className="description">
+            Description: It`s {props.descrip} now
+          </div>
           <br />
         </em>
       </h6>
