@@ -2,33 +2,27 @@ import React from "react";
 import "./Col5.css";
 
 export default function Col5(props) {
-  let mainInfo = {
-    day: "Saturday",
-    date: "08/11/2022",
-    time: "17:24",
-  };
   return (
     <div className="col-5">
-      <span className="icon">
+      <div className="icon">
         <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
-      </span>
+      </div>
       <h1>
-        <span className="temperature">{props.temp} </span>
-        <a href="/">°C</a> /<a href="/">°F</a>
+        <div className="temperature">
+          {props.temp}
+          <a href="/">°C</a> /<a href="/">°F</a>
+        </div>
       </h1>
 
       <h1>
-        <span className="city-name">{props.city}</span>
-        <br />
+        <div className="city-name">{props.city}</div>
         <small>
           <em>
-            <span>{props.day}</span>
-            <br />
-            <span> {mainInfo.date}</span>
-            <br />
-            <span>
+            <div>{props.day}</div>
+            <div>{props.date}</div>
+            <div>
               {props.time}:{props.time2}
-            </span>
+            </div>
           </em>
         </small>
       </h1>

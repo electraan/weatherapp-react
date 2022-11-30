@@ -36,13 +36,12 @@ export default function Form() {
   if (minut < 10) {
     minut = `0{minut}`;
   }
-  /* let fulldate = nowTime.getDate();
+
+  let fulldate = nowTime.getDate();
   let month1 = nowTime.getMonth() + 1;
   let year = nowTime.getFullYear();
-  date = document.querySelector("#date");
-  date.innerHTML = `${fulldate}/${month1}/${year}`;
 
-  function forecastDay(dayNum) {
+  /*function forecastDay(dayNum) {
     let date = new Date(dayNum * 1000);
     let day = date.getDay();
     let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -93,6 +92,9 @@ export default function Form() {
             day={day1}
             time={hours}
             time2={minut}
+            date=<div>
+              {fulldate}/{month1}/{year}
+            </div>
           />
           <Col4
             humid={83}
@@ -128,6 +130,9 @@ export default function Form() {
             day={day1}
             time={hours}
             time2={minut}
+            date=<div>
+              {fulldate}/{month1}/{year}
+            </div>
           />
           <Col4
             humid={humid}
