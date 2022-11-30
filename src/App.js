@@ -1,5 +1,4 @@
 import "./styles.css";
-
 import Form from "./Form";
 import Script from "./Script";
 import "bootstrap/dist/css/bootstrap.css";

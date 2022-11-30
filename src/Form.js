@@ -29,8 +29,13 @@ export default function Form() {
   let day1 = week[nowTime.getDay()];
 
   let hours = nowTime.getHours();
+  if (hours < 10) {
+    hours = `0{hours}`;
+  }
   let minut = nowTime.getMinutes();
-
+  if (minut < 10) {
+    minut = `0{minut}`;
+  }
   /* let fulldate = nowTime.getDate();
   let month1 = nowTime.getMonth() + 1;
   let year = nowTime.getFullYear();
