@@ -1,7 +1,7 @@
 import React from "react";
-import "./Col5.css";
+import "./DateNTime.css";
 
-export default function Col5(props) {
+export default function DateNTime(props) {
   return (
     <div className="col">
       <div className="icon">

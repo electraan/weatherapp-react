@@ -1,7 +1,7 @@
 import React from "react";
-import "./Col3.css";
+import "./Forecast.css";
 
-export default function Col3(props) {
+export default function Forecast(props) {
   return (
     <div className="col">
       <div className="card-body border m-1 rounded">

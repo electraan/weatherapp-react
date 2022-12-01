@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Form.css";
-import Col5 from "./Col5";
-import Col4 from "./Col4";
+import DateNTime from "./DateNTime";
+import Description from "./Description";
 
 export default function Form() {
   let [city, setCity] = useState("");
@@ -85,7 +85,7 @@ export default function Form() {
         </form>
         <div className="row">
           <div className="col-6">
-            <Col5
+            <DateNTime
               city="Stokenchurch"
               temp={3}
               icon="http://openweathermap.org/img/wn/03d@2x.png"
@@ -99,7 +99,7 @@ export default function Form() {
             />
           </div>
           <div className="col-6">
-            <Col4
+            <Description
               humid={83}
               wind={7}
               descrip="Cloudy day"
@@ -127,7 +127,7 @@ export default function Form() {
         </form>
         <div className="row">
           <div className="col-6">
-            <Col5
+            <DateNTime
               city={city}
               temp={Math.round(temp)}
               icon={icon}
@@ -141,7 +141,7 @@ export default function Form() {
             />
           </div>
           <div className="col-6">
-            <Col4
+            <Description
               humid={humid}
               wind={Math.round(wind)}
               descrip={description}

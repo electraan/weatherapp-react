@@ -1,7 +1,7 @@
 import "./styles.css";
 import Form from "./Form";
 import Script from "./Script";
-import Col3 from "./Col3";
+import Forecast from "./Forecast";
 import "bootstrap/dist/css/bootstrap.css";
 import background from "./images/mountains_small.jpg";
 
@@ -20,7 +20,7 @@ export default function App() {
                 <Form />
               </div>
               <div className="col-3">
-                <Col3 />
+                <Forecast />
               </div>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React from "react";
-import "./Col4.css";
+import "./Description.css";
 
-export default function Col4(props) {
+export default function Description(props) {
   return (
     <div className="col">
       <h6 className="wind">
