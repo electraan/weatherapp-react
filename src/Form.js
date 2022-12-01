@@ -84,7 +84,7 @@ export default function Form() {
           <button type="submit"></button>
         </form>
         <div className="row">
-          <div className="col-6">
+          <div className="col-7">
             <DateNTime
               city="Stokenchurch"
               temp={3}
@@ -98,7 +98,7 @@ export default function Form() {
               </div>
             />
           </div>
-          <div className="col-6">
+          <div className="col-5">
             <Description
               humid={83}
               wind={7}
