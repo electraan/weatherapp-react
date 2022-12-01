@@ -3,7 +3,6 @@ import axios from "axios";
 import "./Form.css";
 import Col5 from "./Col5";
 import Col4 from "./Col4";
-import Col3 from "./Col3";
 
 export default function Form() {
   let [city, setCity] = useState("");
@@ -85,26 +84,30 @@ export default function Form() {
           <button type="submit"></button>
         </form>
         <div className="row">
-          <Col5
-            city="Stokenchurch"
-            temp={3}
-            icon="http://openweathermap.org/img/wn/03d@2x.png"
-            day={day1}
-            time={hours}
-            time2={minut}
-            date=<div>
-              {fulldate}/{month1}/{year}
-            </div>
-          />
-          <Col4
-            humid={83}
-            wind={7}
-            descrip="Cloudy day"
-            feels={3}
-            highTemp={7}
-            lowTemp={1}
-          />
-          <Col3 />
+          <div className="col-6">
+            <Col5
+              city="Stokenchurch"
+              temp={3}
+              icon="http://openweathermap.org/img/wn/03d@2x.png"
+              day={day1}
+              time=<div>
+                {hours}:{minut}
+              </div>
+              date=<div>
+                {fulldate}/{month1}/{year}
+              </div>
+            />
+          </div>
+          <div className="col-6">
+            <Col4
+              humid={83}
+              wind={7}
+              descrip="Cloudy day"
+              feels={3}
+              highTemp={7}
+              lowTemp={1}
+            />
+          </div>
         </div>
       </div>
     );
@@ -123,26 +126,30 @@ export default function Form() {
           <button type="submit"></button>
         </form>
         <div className="row">
-          <Col5
-            city={city}
-            temp={Math.round(temp)}
-            icon={icon}
-            day={day1}
-            time={hours}
-            time2={minut}
-            date=<div>
-              {fulldate}/{month1}/{year}
-            </div>
-          />
-          <Col4
-            humid={humid}
-            wind={Math.round(wind)}
-            descrip={description}
-            feels={Math.round(feels)}
-            highTemp={Math.round(highTemp)}
-            lowTemp={Math.round(lowTemp)}
-          />
-          <Col3 />
+          <div className="col-6">
+            <Col5
+              city={city}
+              temp={Math.round(temp)}
+              icon={icon}
+              day={day1}
+              time=<div>
+                {hours}:{minut}
+              </div>
+              date=<div>
+                {fulldate}/{month1}/{year}
+              </div>
+            />
+          </div>
+          <div className="col-6">
+            <Col4
+              humid={humid}
+              wind={Math.round(wind)}
+              descrip={description}
+              feels={Math.round(feels)}
+              highTemp={Math.round(highTemp)}
+              lowTemp={Math.round(lowTemp)}
+            />
+          </div>
         </div>
       </div>
     );

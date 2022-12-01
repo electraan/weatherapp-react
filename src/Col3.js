@@ -3,7 +3,7 @@ import "./Col3.css";
 
 export default function Col3(props) {
   return (
-    <div className="col-3">
+    <div className="col">
       <div className="card-body border m-1 rounded">
         <div className="weatherForecast">
           <div className="forecast-day">

@@ -3,7 +3,7 @@ import "./Col5.css";
 
 export default function Col5(props) {
   return (
-    <div className="col-5">
+    <div className="col">
       <div className="icon">
         <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
       </div>
@@ -20,9 +20,7 @@ export default function Col5(props) {
           <em>
             <div>{props.day}</div>
             <div>{props.date}</div>
-            <div>
-              {props.time}:{props.time2}
-            </div>
+            <div>{props.time}</div>
           </em>
         </small>
       </h1>

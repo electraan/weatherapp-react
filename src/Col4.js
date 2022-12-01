@@ -3,7 +3,7 @@ import "./Col4.css";
 
 export default function Col4(props) {
   return (
-    <div className="col-4">
+    <div className="col">
       <h6 className="wind">
         <em>
           <div className="highTemp">High temp: {props.highTemp}°C</div>
