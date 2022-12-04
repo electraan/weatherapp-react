@@ -64,13 +64,11 @@ export default function Form(props) {
     event.preventDefault();
     let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=454b3c15e44c7f345644cf4c8c057675&units=metric&lang=eng`;
     axios.get(url).then(handleResponse);
+    props.updateData(city);
   }
 
   function newCity(event) {
     setCity(event.target.value);
-    () => {
-      this.props.updateData(this.state.name);
-    };
   }
 
   if (!temp) {
