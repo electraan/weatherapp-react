@@ -4,7 +4,7 @@ import "./Form.css";
 import DateNTime from "./DateNTime";
 import Description from "./Description";
 
-export default function Form() {
+export default function Form(props) {
   let [city, setCity] = useState("");
   let [temp, setTemp] = useState(null);
   let [description, setDescription] = useState("");
@@ -68,7 +68,11 @@ export default function Form() {
 
   function newCity(event) {
     setCity(event.target.value);
+    () => {
+      this.props.updateData(this.state.name);
+    };
   }
+
   if (!temp) {
     return (
       <div className="Form">
