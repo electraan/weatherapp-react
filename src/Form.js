@@ -6,6 +6,7 @@ import Description from "./Description";
 
 export default function Form(props) {
   let [city, setCity] = useState("");
+  let [cityName, setCityName] = useState("");
   let [temp, setTemp] = useState(null);
   let [description, setDescription] = useState("");
   let [humid, setHumid] = useState(null);
@@ -40,15 +41,9 @@ export default function Form(props) {
   let month1 = nowTime.getMonth() + 1;
   let year = nowTime.getFullYear();
 
-  /*function forecastDay(dayNum) {
-    let date = new Date(dayNum * 1000);
-    let day = date.getDay();
-    let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    return weekDays[day];
-  } */
-
   function handleResponse(response) {
     setTemp(response.data.main.temp);
+    setCityName(response.data.name);
     setDescription(response.data.weather[0].description);
     setHumid(response.data.main.humidity);
     setWind(response.data.wind.speed);
@@ -130,7 +125,7 @@ export default function Form(props) {
         <div className="row">
           <div className="col-6">
             <DateNTime
-              city={city}
+              city={cityName}
               temp={Math.round(temp)}
               icon={icon}
               day={day1}
