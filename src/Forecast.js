@@ -1,7 +1,64 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Forecast.css";
+import axios from "axios";
 
 export default function Forecast(props) {
+  /*function forecastDay(dayNum) {
+    let date = new Date(dayNum * 1000);
+    let day = date.getDay();
+    let weekDays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    return weekDays[day];
+  }
+
+  function showForecast(response) {
+    let [forecast, setForecast] = useState("");
+
+    setForecast(response.data.daily);
+   
+   forecast.forEach(function (forecast, index) {
+      if (index < 5 && index > 0) {
+        forecastHTML += `<span class="forecast-day" id="forecast-day">
+        ${forecastDay(
+          forecast.dt
+        )}</span> <span class="forecast-tempHigh">${Math.round(
+          forecast.temp.max
+        )}&#176</span><br>
+        <img src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png" alt="" width="25"/>
+        <span class="forecast-tempLow" id = "forecast-tempLow"> ${Math.round(
+          forecast.temp.min
+        )}&#176</span><hr>`;
+      } else if (index === 5) {
+        forecastHTML += `<span class="forecast-day" id="forecast-day">
+        ${forecastDay(
+          forecast.dt
+        )}</span> <span class="forecast-tempHigh">${Math.round(
+          forecast.temp.max
+        )}&#176</span><br>
+        <img src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png" alt="" width="25"/>
+        <span class="forecast-tempLow" id = "forecast-tempLow"> ${Math.round(
+          forecast.temp.min
+        )}&#176</span>`;
+      }
+    });
+
+    function handlePosition(name) {
+      let myLatitude = name.coords.latitude;
+      let myLongitude = name.coords.longitude;
+      let key = "454b3c15e44c7f345644cf4c8c057675";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLatitude}&lon=${myLongitude}&appid=${key}&units=metric&lang=eng`;
+      axios.get(apiUrl).then(getCoordinates);
+    }
+
+    function getCoordinates(coordinates) {
+      let key = "454b3c15e44c7f345644cf4c8c057675";
+      let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric&lang=eng`;
+      axios.get(apiUrl).then(showForecast);
+    }
+*/
   return (
     <div className="col">
       <div className="card-body border m-1 rounded">

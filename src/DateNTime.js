@@ -1,29 +1,80 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DateNTime.css";
 
 export default function DateNTime(props) {
-  return (
-    <div className="col">
-      <div className="icon">
-        <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
-      </div>
-      <h1>
-        <div className="temperature">
-          {props.temp}
-          <a href="/">°C</a> /<a href="/">°F</a>
-        </div>
-      </h1>
+  let [temp, setTemp] = useState("celsius");
+  function convertTempBack(event) {
+    event.preventDefault();
+    setTemp("celsius");
+  }
 
-      <h1>
-        <div className="city-name">{props.city}</div>
-        <small>
-          <em>
-            <div>{props.day}</div>
-            <div>{props.date}</div>
-            <div>{props.time}</div>
-          </em>
-        </small>
-      </h1>
-    </div>
-  );
+  function convertTemperature(event) {
+    event.preventDefault();
+    setTemp("farengheit");
+  }
+
+  if (temp === "celsius") {
+    return (
+      <div className="col">
+        <div className="icon">
+          <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
+        </div>
+        <h1>
+          <div className="temperature">
+            {props.temp}
+            <a href="/" onClick={convertTempBack}>
+              °C
+            </a>{" "}
+            /
+            <a href="/" onClick={convertTemperature}>
+              °F
+            </a>
+          </div>
+        </h1>
+
+        <h1>
+          <div className="city-name">{props.city}</div>
+          <small>
+            <em>
+              <div>{props.day}</div>
+              <div>{props.date}</div>
+              <div>{props.time}</div>
+            </em>
+          </small>
+        </h1>
+      </div>
+    );
+  } else {
+    let farengheit = (props.temp * 9) / 5 + 32;
+    return (
+      <div className="col">
+        <div className="icon">
+          <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
+        </div>
+        <h1>
+          <div className="temperature">
+            {Math.round(farengheit)}
+            <a href="/" onClick={convertTempBack}>
+              °C
+            </a>{" "}
+            /
+            <a href="/" onClick={convertTemperature}>
+              °F
+            </a>
+          </div>
+        </h1>
+
+        <h1>
+          <div className="city-name">{props.city}</div>
+          <small>
+            <em>
+              <div>{props.day}</div>
+              <div>{props.date}</div>
+              <div>{props.time}</div>
+            </em>
+          </small>
+        </h1>
+      </div>
+    );
+  }
 }
