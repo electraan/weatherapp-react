@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./DateNTime.css";
+import WeatherIcon from "./WeatherIcon";
 
 export default function DateNTime(props) {
   let [temp, setTemp] = useState("celsius");
@@ -16,9 +17,7 @@ export default function DateNTime(props) {
   if (temp === "celsius") {
     return (
       <div className="col">
-        <div className="icon">
-          <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
-        </div>
+        <WeatherIcon icon={props.icon} />
         <h1>
           <div className="temperature">
             {props.temp}
@@ -48,9 +47,7 @@ export default function DateNTime(props) {
     let farengheit = (props.temp * 9) / 5 + 32;
     return (
       <div className="col">
-        <div className="icon">
-          <img src={props.icon} alt="weather icon" id="icon" width="160"></img>
-        </div>
+        <WeatherIcon icon={props.icon} />
         <h1>
           <div className="temperature">
             {Math.round(farengheit)}

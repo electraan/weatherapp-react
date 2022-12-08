@@ -47,9 +47,7 @@ export default function Form(props) {
     setDescription(response.data.weather[0].description);
     setHumid(response.data.main.humidity);
     setWind(response.data.wind.speed);
-    setIcon(
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
-    );
+    setIcon(response.data.weather[0].icon);
     setFeels(response.data.main.feels_like);
     sethighTemp(response.data.main.temp_max);
     setlowTemp(response.data.main.temp_min);
