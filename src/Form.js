@@ -81,9 +81,9 @@ export default function Form(props) {
         <div className="row">
           <div className="col-7">
             <DateNTime
-              city="Stokenchurch"
+              city="Kyiv"
               temp={3}
-              icon="http://openweathermap.org/img/wn/03d@2x.png"
+              icon={icon}
               day={day1}
               time=<div>
                 {hours}:{minut}
