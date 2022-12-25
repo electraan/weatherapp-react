@@ -20,6 +20,7 @@ export default function Forecast(props) {
                 <OneDay data={dailyShows} />
               </div>
             );
+          return null;
         })}
       </div>
     );
