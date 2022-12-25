@@ -29,9 +29,6 @@ export default function DateNTime(props) {
               °F
             </a>
           </div>
-        </h1>
-
-        <h1>
           <div className="city-name">{props.city}</div>
           <small>
             <em>
@@ -59,9 +56,6 @@ export default function DateNTime(props) {
               °F
             </a>
           </div>
-        </h1>
-
-        <h1>
           <div className="city-name">{props.city}</div>
           <small>
             <em>
