@@ -30,11 +30,11 @@ export default function Form(props) {
 
   let hours = nowTime.getHours();
   if (hours < 10) {
-    hours = `0{hours}`;
+    hours = `0${hours}`;
   }
   let minut = nowTime.getMinutes();
   if (minut < 10) {
-    minut = `0{minut}`;
+    minut = `0${minut}`;
   }
 
   let fulldate = nowTime.getDate();

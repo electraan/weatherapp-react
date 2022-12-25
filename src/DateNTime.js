@@ -17,7 +17,7 @@ export default function DateNTime(props) {
   if (temp === "celsius") {
     return (
       <div className="col">
-        <WeatherIcon icon={props.icon} />
+        <WeatherIcon icon={props.icon} size={140} />
         <h1>
           <div className="temperature">
             {props.temp}
@@ -44,7 +44,7 @@ export default function DateNTime(props) {
     let farengheit = (props.temp * 9) / 5 + 32;
     return (
       <div className="col">
-        <WeatherIcon icon={props.icon} />
+        <WeatherIcon icon={props.icon} size={140} />
         <h1>
           <div className="temperature">
             {Math.round(farengheit)}
