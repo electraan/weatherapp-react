@@ -1,8 +1,11 @@
 import React from "react";
 import "./Forecast.css";
-/*import axios from "axios";*/
+import axios from "axios";
 
 export default function Forecast(props) {
+  function showForecast(response) {
+    console.log(response.data);
+  }
   /*function forecastDay(dayNum) {
     let date = new Date(dayNum * 1000);
     let day = date.getDay();
@@ -44,21 +47,14 @@ export default function Forecast(props) {
         )}&#176</span>`;
       }
     });
-
-    function handlePosition(name) {
-      let myLatitude = name.coords.latitude;
-      let myLongitude = name.coords.longitude;
-      let key = "454b3c15e44c7f345644cf4c8c057675";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLatitude}&lon=${myLongitude}&appid=${key}&units=metric&lang=eng`;
-      axios.get(apiUrl).then(getCoordinates);
-    }
-
-    function getCoordinates(coordinates) {
-      let key = "454b3c15e44c7f345644cf4c8c057675";
-      let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${key}&units=metric&lang=eng`;
-      axios.get(apiUrl).then(showForecast);
-    }
 */
+
+  let lat = props.coords.lat;
+  let lon = props.coords.lon;
+  let key = "454b3c15e44c7f345644cf4c8c057675";
+  let apiUrl = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${key}&units=metric&lang=eng`;
+  axios.get(apiUrl).then(showForecast);
+
   return (
     <div className="col">
       <div className="card-body border m-1 rounded">

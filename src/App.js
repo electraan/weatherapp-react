@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import background from "./images/mountains_small.jpg";
 
 export default function App() {
-  const [cityName, setCityName] = useState("");
+  const [coords, setCoords] = useState("");
 
   return (
     <div className="App">
@@ -20,10 +20,10 @@ export default function App() {
           <div className="card-body all">
             <div className="row">
               <div className="col-9">
-                <Form updateData={setCityName} />
+                <Form getCoordinates={setCoords} />
               </div>
               <div className="col-3">
-                <Forecast name={cityName} />
+                <Forecast coords={coords} />
               </div>
             </div>
           </div>

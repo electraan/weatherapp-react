@@ -42,8 +42,9 @@ export default function Form(props) {
   let year = nowTime.getFullYear();
 
   function handleResponse(response) {
-    setTemp(response.data.main.temp);
     setCityName(response.data.name);
+    setTemp(response.data.main.temp);
+    props.getCoordinates(response.data.coord);
     setDescription(response.data.weather[0].description);
     setHumid(response.data.main.humidity);
     setWind(response.data.wind.speed);
