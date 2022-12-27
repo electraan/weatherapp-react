@@ -66,47 +66,17 @@ export default function Form(props) {
   }
 
   if (!temp) {
-    return (
-      <div className="Form">
-        <form className="form-name" onSubmit={showCity}>
-          <input
-            className="city"
-            type="search"
-            onChange={newCity}
-            required
-            placeholder="Enter city"
-            autocomplete="off"
-          ></input>
-          <button type="submit"></button>
-        </form>
-        <div className="row">
-          <div className="col-7">
-            <DateNTime
-              city="Kyiv"
-              temp={3}
-              icon={icon}
-              day={day1}
-              time=<div>
-                {hours}:{minut}
-              </div>
-              date=<div>
-                {fulldate}/{month1}/{year}
-              </div>
-            />
-          </div>
-          <div className="col-5">
-            <Description
-              humid={83}
-              wind={7}
-              descrip="Cloudy day"
-              feels={3}
-              highTemp={7}
-              lowTemp={1}
-            />
-          </div>
-        </div>
-      </div>
-    );
+    function myPosition(position) {
+      let myLat = position.coords.latitude;
+      let myLon = position.coords.longitude;
+      let key = "454b3c15e44c7f345644cf4c8c057675";
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${myLat}&lon=${myLon}&appid=${key}&units=metric&lang=eng`;
+      axios.get(apiUrl).then(handleResponse);
+    }
+    function myLocation() {
+      navigator.geolocation.getCurrentPosition(myPosition);
+    }
+    myLocation();
   } else {
     return (
       <div className="Form">
