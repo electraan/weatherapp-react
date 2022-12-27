@@ -4,7 +4,7 @@ import Form from "./Form";
 import Script from "./Script";
 import Forecast from "./Forecast";
 import "bootstrap/dist/css/bootstrap.css";
-import background from "./images/mountains_small.jpg";
+import background from "./images/orfeas-green.jpg";
 
 export default function App() {
   const [coords, setCoords] = useState("");
